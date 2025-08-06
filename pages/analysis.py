@@ -143,4 +143,4 @@ if prompt := st.chat_input(f"Ask about {selected_company_name}'s financial perfo
                 else:
                     st.warning(f"Could not generate plot for metric: '{metric}'. Please ensure it's in the data table.")
 
-    st.session_state.messages.append({"role": "assistant", "content": response_content})
+    st.session_state.messages.append({"role": "assistant", "content": response_content}) 

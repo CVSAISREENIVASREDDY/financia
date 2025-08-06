@@ -32,7 +32,8 @@ with st.form("login_form"):
             st.session_state["username"] = user[1]
             st.session_state["role"] = user[3]
             st.success(f"Welcome, {st.session_state['username']}!")
-            st.rerun()
+            st.success("Login Successful")
+            st.rerun() 
         else:
             st.error("Invalid username or password.")
 

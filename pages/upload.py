@@ -22,9 +22,9 @@ model = GeminiModel()
 check_login()
 logout_button()
 
-st.write("login successful")
 
 user_role = st.session_state.get('role')
+st.write(f"Hi {user_role}")
 
 if user_role != "analyst":
     st.error("Access Denied, you must login as analyst to upload files")
@@ -101,7 +101,7 @@ elif source_format == "web link" and submitted and year and selected_company_nam
 
             financial_data = model.structure_data_with_gemini(cleaned_text,year)
             st.write(financial_data) 
-            
+
             if "error" in financial_data:
                 st.error(f"AI Analysis Failed: {financial_data['error']}")
             else:
