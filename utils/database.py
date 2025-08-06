@@ -22,13 +22,13 @@ class Database:
         cursor.execute("CREATE TABLE IF NOT EXISTS financial_data (id INTEGER PRIMARY KEY, company_id INTEGER, year INTEGER, metric TEXT, value REAL, source_document TEXT, UNIQUE(company_id, year, metric))")
 
         if self.group_name == 'reliance' and cursor.execute("SELECT COUNT(*) FROM users").fetchone()[0] == 0:
-            cursor.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", ('reliance_analyst', 'password123', 'analyst'))
-            cursor.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", ('jio_ceo', 'password123', 'ceo'))
-            cursor.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", ('reliance_owner', 'password123', 'top_management'))
+            cursor.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", ('reliance_analyst', 'reliance123', 'analyst'))
+            cursor.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", ('jio_ceo', 'jio12345', 'ceo'))
+            cursor.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", ('reliance_owner', 'reliance123', 'top_management'))
 
         if self.group_name == 'tata' and cursor.execute("SELECT COUNT(*) FROM users").fetchone()[0] == 0:
             cursor.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", ('tata_analyst', 'tata1234', 'analyst'))
-            cursor.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", ('tata_steel_ceo', 'tata1234', 'ceo'))
+            cursor.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", ('tata_steel_ceo', 'steel1234', 'ceo'))
             cursor.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", ('tata_owner', 'tata1234', 'top_management'))
 
         if self.group_name == 'reliance' and cursor.execute("SELECT COUNT(*) FROM companies").fetchone()[0] == 0:

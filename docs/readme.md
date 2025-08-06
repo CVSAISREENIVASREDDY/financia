@@ -6,8 +6,8 @@ Financia is a web application that allows users to analyze the financial perform
 
 ## Features
 
-- Secure Login with Role-Based Access
-    - Analyst: Upload PDFs and view all companies.
+- Secure Login with Role-Based Access 
+    - Analyst: Upload PDFs and view all companies of the selected Group of Industries. 
     - CEO: View their company's financials.
     - Top Management: View all companies under their group. 
 
@@ -35,6 +35,17 @@ Financia is a web application that allows users to analyze the financial perform
 | Charts | Plotly |
 
 ---
+
+## Sample Login Credentials 
+- Tata
+    | tata_analyst | tata1234 | 
+    | tata_steel_ceo | steel1234 | 
+    | tata_owner | tata1234 |
+- Reliance
+    | reliance_analyst | reliance123 | 
+    | jio_ceo | jio12345 | 
+    | reliance_owner | reliance123 |
+
 
 ## Setup & Installation
 ## How to Run
