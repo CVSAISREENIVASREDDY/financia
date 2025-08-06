@@ -37,12 +37,13 @@ Financia is a web application that allows users to analyze the financial perform
 ---
 
 ## Sample Login Credentials 
+Tata
 | username | password |
 |---|---|
 | tata_analyst | tata1234 | 
 | tata_steel_ceo | steel1234 | 
 | tata_owner | tata1234 |
-- Reliance
+Reliance
 | reliance_analyst | reliance123 | 
 | jio_ceo | jio12345 | 
 | reliance_owner | reliance123 |
