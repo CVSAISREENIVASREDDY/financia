@@ -16,7 +16,7 @@ Financia is a web application that allows users to analyze the financial perform
     - Web Page Content Extraction using `requests` and `BeautifulSoup` 
     - Structured Storage of extracted metrics in SQLite
 
--Analysis 
+- Analysis 
     - AI-Powered Financial Analysis using Google Gemini
     - Interactive Visualizations with Plotly (Line, Bar, Growth, Asset-Liability charts)
     - Natural Language Chat Interface for AI-based Q&A
