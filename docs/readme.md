@@ -5,6 +5,8 @@
 Financia is a web application that allows users to analyze the financial performance of companies. The application provides features for uploading financial reports, extracting key financial metrics using AI, and visualizing data through various charts. It also includes an AI-powered chat assistant to help users with their analysis.
 
 ## Workflow
+
+```text
 Financia Application Workflow
 │
 ├── 👤 1. User Authentication
@@ -36,8 +38,7 @@ Financia Application Workflow
         └── AI Generates Response
             ├── 📝 Textual Analysis: Provides written insights.
             └── 💹 Visualization Request: (If needed) Commands the app to generate a chart.
-                └── App renders the requested interactive chart (`plotly`). 
-                
+                └── App renders the requested interactive chart (`plotly`).
 ## Features
 
 - Secure Login with Role-Based Access 
