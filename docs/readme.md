@@ -28,7 +28,7 @@ Financia is a web application that allows users to analyze the financial perform
 | Component | Tool / Library |
 |---|---|
 | Frontend | Streamlit |
-| AI / LLM | Google Gemini |
+| AI / LLM | Gemini 1.5 flash |
 | PDF Parsing | pdfplumber |
 | Web Scraping | requests, beautifulsoup4 |
 | Database | SQLite |
