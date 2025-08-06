@@ -53,7 +53,7 @@ Tata & Reliance
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/CVSAISREENIVASREDDY/financia.git](https://github.com/CVSAISREENIVASREDDY/financia.git)
+    git clone https://github.com/CVSAISREENIVASREDDY/financia
     cd financia
     ```
 
