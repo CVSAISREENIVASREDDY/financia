@@ -39,6 +39,7 @@ Financia Application Workflow
             ├── 📝 Textual Analysis: Provides written insights.
             └── 💹 Visualization Request: (If needed) Commands the app to generate a chart.
                 └── App renders the requested interactive chart (`plotly`).
+```
 ## Features
 
 - Secure Login with Role-Based Access 
