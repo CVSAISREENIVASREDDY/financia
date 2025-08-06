@@ -4,6 +4,39 @@
 
 Financia is a web application that allows users to analyze the financial performance of companies. The application provides features for uploading financial reports, extracting key financial metrics using AI, and visualizing data through various charts. It also includes an AI-powered chat assistant to help users with their analysis.
 
+## Features
+
+- Secure Login with Role-Based Access
+    - Analyst: Upload PDFs and view all companies.
+    - CEO: View their company's financials.
+    - Top Management: View all companies under their group. 
+
+- upload sources 
+    - PDF Parsing using `pdfplumber`, page-by-page
+    - Web Page Content Extraction using `requests` and `BeautifulSoup` 
+    - Structured Storage of extracted metrics in SQLite
+
+-Analysis 
+    - AI-Powered Financial Analysis using Google Gemini
+    - Interactive Visualizations with Plotly (Line, Bar, Growth, Asset-Liability charts)
+    - Natural Language Chat Interface for AI-based Q&A
+
+---
+
+## Tech Stack
+
+| Component | Tool / Library |
+|---|---|
+| Frontend | Streamlit |
+| AI / LLM | Google Gemini |
+| PDF Parsing | pdfplumber |
+| Web Scraping | requests, beautifulsoup4 |
+| Database | SQLite |
+| Charts | Plotly |
+
+---
+
+## Setup & Installation
 ## How to Run
 
 1.  **Clone the repository:**
