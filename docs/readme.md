@@ -8,26 +8,38 @@ Financia is a web application that allows users to analyze the financial perform
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository_url>
+    git clone [https://github.com/CVSAISREENIVASREDDY/financia.git](https://github.com/CVSAISREENIVASREDDY/financia.git)
     cd financia
     ```
 
-2.  **Install dependencies:**
+2.  **Create and activate a virtual environment:**
+    * **On Windows:**
+        ```bash
+        python -m venv venv
+        .\venv\Scripts\activate
+        ```
+    * **On macOS/Linux:**
+        ```bash
+        python3 -m venv venv
+        source venv/bin/activate
+        ```
+
+3.  **Install dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Set up the environment variables:**
+4.  **Set up the environment variables:**
     * Create a `.env` file in the root directory.
     * Add your Gemini API key to the `.env` file:
         ```
         GEMINI_API_KEY="your_api_key"
         ```
 
-4.  **Run the application:**
+5.  **Run the application:**
     ```bash
     streamlit run login.py
     ```
 
-5.  **Access the application:**
+6.  **Access the application:**
     * Open your web browser and go to the local URL provided by Streamlit (usually `http://localhost:8501`).
