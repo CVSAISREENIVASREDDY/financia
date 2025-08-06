@@ -70,7 +70,7 @@ class GeminiModel:
             )
             return json.loads(response.text)
         except Exception as e:
-            return {"message": f"I apologize, but I encountered an issue. Please try rephrasing your question. (Error: {e})"}
+            return {"message": f"I apologize, but I encountered an issue. (Error: {e})"}
 
     def structure_data_with_gemini(self, text, year):
         prompt = f"""
