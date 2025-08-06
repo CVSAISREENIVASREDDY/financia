@@ -4,6 +4,40 @@
 
 Financia is a web application that allows users to analyze the financial performance of companies. The application provides features for uploading financial reports, extracting key financial metrics using AI, and visualizing data through various charts. It also includes an AI-powered chat assistant to help users with their analysis.
 
+## Workflow
+Financia Application Workflow
+│
+├── 👤 1. User Authentication
+│   ├── Enters Credentials (Username & Password)
+│   └── System Validates against SQLite DB
+│       ├── ✅ Success: Session Created, Role assigned (Analyst, CEO, etc.)
+│       └── ❌ Failure: Shows "Invalid Credentials" Error
+│
+├── 📥 2. Data Ingestion (Analyst Role Only)
+│   ├── User selects a data source
+│   │   ├── Option A: Upload PDF
+│   │   │   └── 📄 Parse Text from PDF (`pdfplumber`)
+│   │   └── Option B: Provide Web Link
+│   │       └── 🌐 Fetch & Parse HTML (`requests`, `BeautifulSoup`)
+│   │
+│   └── 🧠 AI Processing
+│       ├── Send Extracted Text to Gemini API
+│       ├── AI Extracts Financial Metrics as JSON
+│       └── 💾 Save Structured Data to SQLite Database
+│
+└── 📊 3. Data Analysis & Interaction (All Roles)
+    ├── User selects a company to analyze
+    ├── View Financial Snapshot
+    │   └── 📈 Fetches historical data from SQLite and displays it in a table
+    │
+    └── Chat with AI Assistant
+        ├── User asks a question in the chat input
+        ├── System sends the question + financial data context to Gemini API
+        └── AI Generates Response
+            ├── 📝 Textual Analysis: Provides written insights.
+            └── 💹 Visualization Request: (If needed) Commands the app to generate a chart.
+                └── App renders the requested interactive chart (`plotly`). 
+                
 ## Features
 
 - Secure Login with Role-Based Access 

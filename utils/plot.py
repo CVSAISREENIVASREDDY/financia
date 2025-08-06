@@ -58,11 +58,15 @@ def create_growth_chart(df, metric, title):
     growth = data.pct_change() * 100 # Calculate percentage growth
     growth = growth.dropna() # Remove the first year which has no growth value
 
+    growth_df = growth.reset_index()
+    growth_df.columns = ['Year', 'YoY Growth (%)']
+
     fig = px.bar(
-        x=growth.index,
-        y=growth.values,
+        growth_df,
+        x='Year',
+        y='YoY Growth (%)',
         title=title,
-        labels={'x': 'Year', 'y': 'YoY Growth (%)'}
+        labels={'Year': 'Year', 'YoY Growth (%)': 'YoY Growth (%)'}
     )
     fig.update_traces(texttemplate='%{y:.2f}%', textposition='outside')
     return fig
