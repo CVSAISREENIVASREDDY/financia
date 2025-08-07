@@ -1,11 +1,15 @@
 import json
 import google.generativeai as genai
 import os
+import streamlit as st
 
 from dotenv import load_dotenv
 load_dotenv()
 
 API_KEY = os.getenv("GEMINI_API_KEY")
+if not API_KEY:
+    st.error("GEMINI_API_KEY not found in environment variables. Please set it before running the app.")
+    raise ValueError("GEMINI_API_KEY is required for GeminiModel to function.")
 genai.configure(api_key=API_KEY)
 
 REQUIRED_KEYS = [
